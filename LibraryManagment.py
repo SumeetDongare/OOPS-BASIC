@@ -133,3 +133,31 @@ library.remove_book(book3)
 
 # Remove Student
 library.remove_student(student2)   
+
+"""
+Output:-
+Book added successfully.
+Book added successfully.
+Book added successfully.
+Student added successfully.
+Student added successfully.
+Title:Python Programming
+Author:John Smith
+Student ID:101
+Name:Rahul
+Borrowed Books:
+Title:Python Programming
+Author:John Smith
+Book borrowed successfully.
+Student ID:101
+Name:Rahul
+Borrowed Books:
+- Python Programming by John Smith
+Book is not available.
+Book returned successfully.
+Student ID:101
+Name:Rahul
+Borrowed Books:
+Book removed successfully.
+Student removed successfully.
+"""
