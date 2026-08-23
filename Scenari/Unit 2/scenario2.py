@@ -43,29 +43,6 @@ library.add_book(Book(103, "Machine Learning", "David Lee", 800))
 library.display_books()
 
 """
---- Mobile Store ---
-Brand   : Apple
-Model   : iPhone 15
-Price   : 70000
-Category: Premium
---------------------
-Brand   : Samsung
-Model   : Galaxy A55
-Price   : 35000
-Category: Mid-range
---------------------
-Brand   : Redmi
-Model   : Note 13
-Price   : 15000
-Category: Budget
---------------------
-Brand   : OnePlus
-Model   : 12R
-Price   : 45000
-Category: Mid-range
---------------------
-PS C:\Users\Sumeet Dongare\Desktop\SightSpeak> python -u "c:\Users\Sumeet Dongare\Desktop\SightSpeak\scenario2.py"
-
 --- Library Books ---
 Book ID  : 101
 Title    : Python Programming
