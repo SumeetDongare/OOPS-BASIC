@@ -42,3 +42,37 @@ store.add_mobile(Mobile("OnePlus", "12R", 45000))
 
 # Displaying all mobiles
 store.display_mobiles()
+
+"""--- Mobile Store ---
+Brand   : Apple
+Model   : iPhone 15
+Price   : 70000
+Category: Premium
+--------------------
+Brand   : Samsung
+Model   : Galaxy A55
+Price   : 35000
+Category: Mid-range
+--------------------
+Brand   : Redmi
+Model   : Note 13
+Price   : 15000
+Category: Budget
+--------------------
+Brand   : OnePlus
+Model   : 12R
+Price   : 45000
+Category: Mid-range
+--------------------
+"""
+
+
+
+
+
+
+
+
+
+
+
