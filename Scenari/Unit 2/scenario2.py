@@ -1,69 +1,30 @@
-class Book:
-    def __init__(self, book_id, title, author, price):
-        self.book_id = book_id
-        self.title = title
-        self.author = author
-        self.price = price
+n = int(input("Enter number of houses: "))
 
-    def get_category(self):
-        if self.price >= 500:
-            return "Premium"
-        else:
-            return "Standard"
+money = []
 
+for i in range(n):
+    amount = int(input(f"Enter amount in house {i + 1}: "))
+    money.append(amount)
 
-class Library:
-    def __init__(self):
-        self.books = []
-
-    def add_book(self, book):
-        self.books.append(book)
-
-    def display_books(self):
-        print("\n--- Library Books ---")
-
-        for book in self.books:
-            print("Book ID  :", book.book_id)
-            print("Title    :", book.title)
-            print("Author   :", book.author)
-            print("Price    :", book.price)
-            print("Category :", book.get_category())
-            print("---------------------")
-
-
-# Creating Library
-library = Library()
-
-# Adding books
-library.add_book(Book(101, "Python Programming", "John Smith", 650))
-library.add_book(Book(102, "Data Structures", "Robert Brown", 450))
-library.add_book(Book(103, "Machine Learning", "David Lee", 800))
-
-# Displaying all books
-library.display_books()
+if n == 0:
+    maximum = 0
+elif n == 1:
+    maximum = money[0]
+else:
+    dp = [0] * n
+    dp[0] = money[0]
+    dp[1] = max(money[0], money[1])
+    for i in range(2, n):
+        dp[i] = max(dp[i - 1], dp[i - 2] + money[i])
+    maximum = dp[n - 1]
+print("Maximum possible amount:", maximum)
 
 """
---- Library Books ---
-Book ID  : 101
-Title    : Python Programming
-Author   : John Smith
-Price    : 650
-Category : Premium
----------------------
-Book ID  : 102
-Title    : Data Structures
-Author   : Robert Brown
-Price    : 450
-Category : Standard
----------------------
-Book ID  : 103
-Title    : Machine Learning
-Author   : David Lee
-Price    : 800
-Category : Premium
----------------------
+Enter number of houses: 5
+Enter amount in house 1: 50000
+Enter amount in house 2: 40000
+Enter amount in house 3: 80000
+Enter amount in house 4: 60000
+Enter amount in house 5: 40000
+Maximum possible amount: 170000
 """
-
-
-
-
